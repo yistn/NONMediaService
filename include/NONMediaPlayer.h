@@ -9,10 +9,10 @@
 typedef const char* (*getIptvUrl)(int);
 typedef void (*mediaIptvMsg)(char *);
 
-class HtvMediaPlayer
+class NONMediaPlayer
 {
     public:
-        NONMediaPlayer(getIptvUrl url=0, mediaIptvMsg msg=0);
+        NONMediaPlayer(getIptvUrl url=NULL, mediaIptvMsg msg=NULL);
         virtual ~NONMediaPlayer();
         
         //add 

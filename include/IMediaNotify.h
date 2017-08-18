@@ -24,7 +24,7 @@ class IMediaNotify: public IInterface {
         
         virtual void notify(int msg, int ext1, int ext2, const Parcel *obj) = 0;
         virtual void getUrl(int id) = 0;
-        virtual void mediaMsg(char* msg) = 0;
+        virtual void mediaMsg(const char* msg) = 0;
 };
 
 class BnMediaNotify : public BnInterface<IMediaNotify> {  

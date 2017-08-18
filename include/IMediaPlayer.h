@@ -213,7 +213,7 @@ class IMediaPlayer {
         virtual void runGame(const char* values);
         
     private:
-        TVMediaService *m_service;
+        NONMediaService *m_service;
 };
 
 #endif

@@ -14,15 +14,9 @@
 #define LOGD(...)
 #endif // DEBUG 
 
-void MediaNotify::instantiate()
-{
-    LOGD("MediaNotify::instantiate\n");
-    //defaultServiceManager()->addService(String16(SERVICE_NAME),new MediaNotify());
-}
-
 MediaNotify::MediaNotify(NONMediaPlayer *iptvMClient)
-:BnMediaNotify(),
- m_iptvMClient(iptvMClient)
+    : BnMediaNotify()
+    , m_iptvMClient(iptvMClient)
 {
     LOGD("MediaNotify::MediaNotify\n");
 }
@@ -30,6 +24,12 @@ MediaNotify::MediaNotify(NONMediaPlayer *iptvMClient)
 MediaNotify::~MediaNotify()
 {
     LOGD("MediaNotify::~MediaNotify\n");
+}
+
+void MediaNotify::instantiate()
+{
+    LOGD("MediaNotify::instantiate\n");
+    //defaultServiceManager()->addService(String16(SERVICE_NAME),new MediaNotify());
 }
 
 void MediaNotify::getUrl(int id)

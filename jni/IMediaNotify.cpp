@@ -59,7 +59,7 @@ class BpMediaNotify: public BpInterface<IMediaNotify>
             return; 
         }
 
-        virtual void mediaMsg(char *msg)
+        virtual void mediaMsg(const char *msg)
         {
             LOGD("%s line(%d);", __func__, __LINE__);
             LOGD("IMediaNotify::mediaMsg start msg=%s", msg);

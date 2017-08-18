@@ -13,9 +13,10 @@ class MediaPlayer;
 class MediaNotify : public BnMediaNotify
 { 
     public:  
-        static void instantiate();  
         MediaNotify(NONMediaPlayer *iptvMClient);
         ~MediaNotify();
+
+        static void instantiate();  
         void notify(int msg, int ext1, int ext2, const Parcel *obj = NULL);        
         void getUrl(int id);
         void mediaMsg(char *msg);
